@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RecordButton">
+        <attr name="rb_backColor" format="color"/>
+        <attr name="rb_buttonColor" format="color"/>
+        <attr name="rb_progressbarColor" format="color"/>
+        <attr name="rb_progressTime" format="integer"/>
+        <attr name="rb_progressbarWidth" format="dimension"/>
+    </declare-styleable>
+
+</resources>
