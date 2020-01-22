@@ -17,15 +17,12 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.graphics.drawable.Animatable;
-import android.os.Build;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.LinearInterpolator;
 
-import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 
 public class RecordButton extends View implements Animatable {
     private Paint buttonPaint, behindButtonPaint, strokeProgressPaint;
@@ -57,21 +54,16 @@ public class RecordButton extends View implements Animatable {
         init(context, null);
     }
 
-    public RecordButton(Context context, @Nullable AttributeSet attrs) {
+    public RecordButton(Context context,  AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs);
     }
 
-    public RecordButton(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public RecordButton(Context context,  AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, attrs);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    public RecordButton(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-        init(context, attrs);
-    }
 
     private void init(Context context, AttributeSet attrs) {
         buttonRadius = 85f;

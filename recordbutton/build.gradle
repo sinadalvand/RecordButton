@@ -1,6 +1,37 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'RecordButton'
+
+    publishedGroupId = 'ir.sinadalvand.libs'
+    libraryName = 'RecordButton'
+    artifact = 'recordbutton'
+
+    libraryDescription = 'Video and Audio Record Button'
+
+    siteUrl = 'https://github.com/sinadalvand/RecordButton'
+    gitUrl = 'https://github.com/sinadalvand/RecordButton.git'
+
+    libraryVersion = "1.0.0"
+
+    developerId = 'sinadalvand'
+    developerName = 'Sina Dalvand'
+    developerEmail = 'dalvandsina@yahoo.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+tasks.withType(Javadoc) {
+    excludes = ['**/*.kt']
+    options.addStringOption('Xdoclint:none', '-quiet')
+    options.addStringOption('encoding', 'UTF-8')
+    options.addStringOption('charSet', 'UTF-8')
+}
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -34,3 +65,8 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
+
+
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
